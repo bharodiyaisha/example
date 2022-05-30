@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+
+import LocalStorage from "./components/LocalStorage/LocalStorage.js";
+import SessionStorage from "./components/SessionStorage/SessionStorage.js";
+
+import "./components/LocalStorage/localStorage.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <nav className="navbar navbar-expand-lg bg-light">
+          <div className="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul className="link">
+              <Link className="tag" to={"/"}>
+                LocalStorage
+              </Link>
+              <Link className="tag" to={"/sessionStorage"}>
+                SessionStorage
+              </Link>
+            </ul>
+          </div>
+        </nav>
+        <Routes>
+          <Route path="/" element={<LocalStorage />} />
+          <Route path="/sessionStorage" element={<SessionStorage />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

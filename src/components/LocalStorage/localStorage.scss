@@ -1,0 +1,75 @@
+$padding: 16px;
+$width: 100%;
+$display: flex;
+$outline: none;
+$color: black;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS";
+}
+
+body {
+  background-color: rgb(252, 186, 197);
+}
+
+.form {
+  width: $width;
+  height: 100vh;
+  display: $display;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.input {
+  padding: 14px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid rgb(209, 26, 59);
+  outline: $outline;
+  width: 320px;
+  background: transparent;
+  color: $color;
+
+  &.input::placeholder {
+    color: $color;
+  }
+}
+
+.button {
+  padding: $padding;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: $outline;
+  background: linear-gradient(rgb(241, 113, 134), rgb(209, 26, 59));
+  color: $color;
+  text-transform: capitalize;
+}
+
+.row {
+  display: $display;
+  justify-content: space-between;
+  margin: 4px auto;
+  color: black;
+  background: linear-gradient(rgb(245, 150, 165), rgb(243, 76, 106));
+  padding: 0px;
+  border-radius: 5px;
+  width: $width;
+}
+
+.link {
+  background-color: rgb(248, 149, 165);
+  padding: 20px;
+}
+.tag {
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+.tag:hover {
+  background-color: rgb(245, 197, 197);
+}
