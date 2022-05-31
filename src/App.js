@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
-import ImageVideo from "./components/ImageVideo/ImageVideo.js"
+import Grid from "./components/Grid/Grid.js"
 
 import "./navbar.scss";
 
@@ -11,14 +11,14 @@ function App() {
         <nav className="navbar navbar-expand-lg bg-light">
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="nav">
-              <Link className="link" to={"/imageVideo"}>
-                ImageVideo
+            <Link className="link" to={"/grid"}>
+                Grid
               </Link>
             </ul>
           </div>
         </nav>
         <Routes>
-          <Route path="/imageVideo" element={<ImageVideo />} />
+        <Route path="/grid" element={<Grid />} />
         </Routes>
       </BrowserRouter>
     </div>
