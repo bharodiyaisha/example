@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
 import ImageVideo from "./components/ImageVideo/ImageVideo.js"
 
-import "./components/ImageVideo/imageVideo.scss";
+import "./navbar.scss";
 
 function App() {
   return (
