@@ -1,0 +1,142 @@
+$display: flex;
+$width: 100%;
+$input-height: 45px;
+$margin-bottom:15px;
+
+@mixin input {
+  height: $input-height;
+  width: $width;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid rgb(58, 49, 49);
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  display: $display;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(pink, rgb(250, 30, 71));
+  padding: 10px;
+}
+
+.container {
+  max-width: 700px;
+  width: $width;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+
+.user-detail {
+  display: $display;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+.input-box {
+  margin-bottom: $margin-bottom;
+  width: calc(100% / 3 - 10px);
+  & input {
+    @include input;
+  }
+}
+
+.input-email {
+  margin-bottom: $margin-bottom;
+  width: calc(100% - 10px);
+  & input {
+    @include input;
+  }
+}
+
+.input-password {
+  margin-bottom: $margin-bottom;
+  width: calc(50% - 10px);
+  & input {
+    @include input;
+  }
+}
+
+.details {
+  display: block;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.gender-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+button {
+  width: 630px;
+  height: $input-height;
+  background: linear-gradient(pink, rgb(238, 72, 103));
+}
+
+.check-space {
+  margin-right: 4px;
+}
+
+@media (max-width: 685px) {
+  .container {
+    max-width: 100%;
+    justify-content: center;
+  }
+  .input-box {
+    width: calc(50% / 3 - 20px);
+  }
+  .input-email {
+    width: calc(50% / 2 - 20px);
+  }
+  button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 682px) {
+  .input-box,
+  .input-email,
+  .input-password {
+    width: calc(100% / 2 - 20px);
+  }
+}
+
+@media (max-width: 487px) {
+  .input-box,
+  .input-email,
+  .input-password {
+    width: 100%;
+  }
+}
+
+.nav {
+  background-color: rgb(248, 149, 165);
+  padding: 20px;
+}
+.link {
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+.link:hover {
+  background-color: rgb(245, 197, 197);
+}
