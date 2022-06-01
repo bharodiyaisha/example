@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <nav className="navbar navbar-expand-lg bg-light">
+      <nav className="navbar navbar-expand-lg bg-light">
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="nav">
               <Link className="link" to={"/"}>
