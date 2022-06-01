@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
-import Grid from "./components/Grid/Grid.js"
+import LocalStorage from "./components/LocalStorage/LocalStorage.js";
+import SessionStorage from "./components/SessionStorage/SessionStorage.js";
 
 import "./navbar.scss";
 
@@ -11,14 +12,18 @@ function App() {
         <nav className="navbar navbar-expand-lg bg-light">
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="nav">
-            <Link className="link" to={"/grid"}>
-                Grid
+            <Link className="tag" to={"/"}>
+                LocalStorage
+              </Link>
+              <Link className="tag" to={"/sessionStorage"}>
+                SessionStorage
               </Link>
             </ul>
           </div>
         </nav>
         <Routes>
-          <Route path="/grid" element={<Grid />} />
+        <Route path="/" element={<LocalStorage />} />
+          <Route path="/sessionStorage" element={<SessionStorage />} />
         </Routes>
       </BrowserRouter>
     </div>
@@ -26,3 +31,4 @@ function App() {
 }
 
 export default App;
+
