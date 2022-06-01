@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 
 import Grid from "./components/Grid/Grid.js"
 
-import "./components/Grid/grid.scss";
+import "./navbar.scss";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <nav className="navbar navbar-expand-lg bg-light">
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="nav">
-              <Link className="link" to={"/grid"}>
+            <Link className="link" to={"/grid"}>
                 Grid
               </Link>
             </ul>
