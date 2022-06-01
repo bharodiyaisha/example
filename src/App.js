@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import LocalStorage from "./components/LocalStorage/LocalStorage.js";
 import SessionStorage from "./components/SessionStorage/SessionStorage.js";
 
-import "./components/LocalStorage/localStorage.scss";
+import "./navbar.scss";
 
 function App() {
   return (
@@ -11,11 +11,11 @@ function App() {
       <BrowserRouter>
         <nav className="navbar navbar-expand-lg bg-light">
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul className="link">
-              <Link className="tag" to={"/"}>
+          <ul className="nav">
+              <Link className="link" to={"/"}>
                 LocalStorage
               </Link>
-              <Link className="tag" to={"/sessionStorage"}>
+              <Link className="link" to={"/sessionStorage"}>
                 SessionStorage
               </Link>
             </ul>
